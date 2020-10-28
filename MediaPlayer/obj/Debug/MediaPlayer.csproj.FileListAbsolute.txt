@@ -1,0 +1,7 @@
+D:\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe.config
+D:\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe
+D:\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.pdb
+D:\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csprojAssemblyReference.cache
+D:\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.CoreCompileInputs.cache
+D:\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.exe
+D:\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.pdb
