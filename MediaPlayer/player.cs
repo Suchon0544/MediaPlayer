@@ -1,44 +1,72 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
 namespace MediaPlayer
 {
     public class Bottom
     {
-        Album album = new Album();
-        //public string Answer;
+        Album album1 = new Album();
+        //string Answer = Console.ReadLine();
 
-        public void Play(string Answer)
+        public void play()
         {
-            /*Console.WriteLine("         ", tracks[1].name, "         ");
-            Console.WriteLine("         ", tracks[1].Artist, "         ");
-            Console.WriteLine("00.00 -------------------------", tracks[1].time);*/
+            Console.WriteLine("Now Playing   :  " + album1.PlayCD(0).name);
+            Console.WriteLine("Artist   :  " + album1.PlayCD(0).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(0).time);
+            Console.WriteLine("<              [pause]              >");
         }
 
-        public void Next(string Answer)
-        {
-
-        }
-
-        public void Previous(string Answer)
+        public void next()
         {
 
         }
 
-        public void Stop(string Answer)
+        public void previous()
         {
 
         }
 
-        public void Ask(string Answer)
+        public void Stop()
         {
-            Console.WriteLine("p for play your music");
-            Console.WriteLine("n for play next music");
-            Console.WriteLine("r for play previous music");
-            Console.WriteLine("s for stop playing");
-            Console.WriteLine("Input for Press bottom : ");
-            Answer = Console.ReadLine();
-            //return Answer;
+            Console.WriteLine("Now Playing   :  " + album1.PlayCD(0).name);
+            Console.WriteLine("Artist   :  " + album1.PlayCD(0).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(0).time);
+            Console.WriteLine("<               [play]               >");
+        }
+
+        public void add()
+        {
+
+        }
+
+        public static void ask()
+        {
+            Bottom bottom = new Bottom() ;
+            Console.WriteLine("     ");
+            Console.Write(" Input for press bottom : ");
+            string Answer = Console.ReadLine();
+            Console.WriteLine("     " + Answer);
+
+            switch (Answer)
+             {
+                 case "1":
+                    bottom.play();
+                     break;
+                case "2":
+                    bottom.next();
+                    break;
+                case "3":
+                    bottom.previous();
+                    break;
+                case "4":
+                    bottom.Stop();
+                    break;
+                case "0":
+                    bottom.add();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
