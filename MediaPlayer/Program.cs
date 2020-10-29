@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
@@ -20,32 +20,20 @@ namespace MediaPlayer
             Album album1 = new Album();
             Bottom bottom1 = new Bottom();
 
-            
-            Console.WriteLine("Now Playing   :  "+ album1.PlayCD(5).name);
-            Console.WriteLine("Artist   :  "+ album1.PlayCD(0).artist);
-            Console.WriteLine("00.00 ------------------------- " + album1.PlayCD(5).time);
-            Console.WriteLine("<                 ►                 >");
-
-            Bottom.Ask();
-
-            /*for (int i = 0; i < 6; i++)
+            Console.WriteLine("Input: 1 for play your music");
+            Console.WriteLine("       2 for play next music");
+            Console.WriteLine("       3 for play previous music");
+            Console.WriteLine("       4 for stop playing");
+            Console.WriteLine("       0 for add music");
+            Console.WriteLine("     ");
+            Console.WriteLine("Now Playing   :  "+ album1.PlayCD(1).name);
+            Console.WriteLine("Artist   :  "+ album1.PlayCD(1).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(1).time);
+            Console.WriteLine("<               [play]               >");
+            for (int i = 0; i < 10; i++)
             {
-                //Console.WriteLine(album1.PlayCD().name);
-                Console.WriteLine(album1.PlayCD().artist);
-                //Console.WriteLine(album1.PlayCD().time);
+                Bottom.ask();
             }
-
-            for (int i = 0; i < 6; i++)
-            {
-                //Console.WriteLine(album1.PlayCD().name);
-                //Console.WriteLine(album1.PlayCD().artist);
-                Console.WriteLine(album1.PlayCD().time);
-            }*/
-
-            /*Console.WriteLine(tracks[0].name);
-            Console.WriteLine(tracks[0].artist);
-            Console.WriteLine(tracks[0].time);*/
         }
     }
-
 }    
