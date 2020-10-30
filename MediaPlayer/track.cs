@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 
 namespace MediaPlayer
 {
@@ -8,7 +9,7 @@ namespace MediaPlayer
         public string artist;
         public string time;
 
-        public void SetTrack(string name, string artist, string time)
+        public Track(string name, string artist, string time)
         {
             this.name = name;
             this.artist = artist;
