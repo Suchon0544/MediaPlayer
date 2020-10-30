@@ -6,26 +6,32 @@ namespace MediaPlayer
     public class Bottom
     {
         Album album1 = new Album();
-        //string Answer = Console.ReadLine();
+        int _next = 0;
 
         public void play()
         {
-            Console.WriteLine("Now Playing   :  " + album1.PlayCD(0).name);
-            Console.WriteLine("Artist   :  " + album1.PlayCD(0).artist);
-            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(0).time);
+            Console.WriteLine("Now Playing   :  " + album1.PlayCD(_next).name);
+            Console.WriteLine("Artist   :  " + album1.PlayCD(_next).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(_next).time);
             Console.WriteLine("<              [pause]              >");
         }
 
         public void next()
         {
-
+            _next = _next + 1;
+            Console.WriteLine("Now Playing   :  " + album1.PlayCD(_next).name);
+            Console.WriteLine("Artist   :  " + album1.PlayCD(_next).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(_next).time);
+            Console.WriteLine("<              [pause]              >");
         }
-
         public void previous()
         {
-
+            _next = _next - 1;
+            Console.WriteLine("Now Playing   :  " + album1.PlayCD(_next).name);
+            Console.WriteLine("Artist   :  " + album1.PlayCD(_next).artist);
+            Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(_next).time);
+            Console.WriteLine("<              [pause]              >");
         }
-
         public void Stop()
         {
             Console.WriteLine("Now Playing   :  " + album1.PlayCD(0).name);
@@ -36,35 +42,55 @@ namespace MediaPlayer
 
         public void add()
         {
-
+            Console.Write("input name = ");
+            string input_name = Console.ReadLine();
+            Console.Write("input artist = ");
+            string input_artist = Console.ReadLine();
+            Console.Write("input time = ");
+            string input_time = Console.ReadLine();
+            album1.Addmusic(input_name, input_artist, input_time);
         }
-
         public static void ask()
         {
-            Bottom bottom = new Bottom() ;
+            Bottom bottom = new Bottom();
+            Album album = new Album();
+        UP:
             Console.WriteLine("     ");
             Console.Write(" Input for press bottom : ");
             string Answer = Console.ReadLine();
-            Console.WriteLine("     " + Answer);
+            Console.WriteLine("        ");
+            //Console.WriteLine("     " + Answer);
 
             switch (Answer)
-             {
-                 case "1":
+            {
+                case "p":
                     bottom.play();
-                     break;
-                case "2":
+                    goto UP;
+                    break;
+                case "n":
                     bottom.next();
+                    goto UP;
                     break;
-                case "3":
+                case "r":
                     bottom.previous();
+                    goto UP;
                     break;
-                case "4":
+                case "s":
                     bottom.Stop();
+                    goto UP;
                     break;
-                case "0":
+                case "a":
                     bottom.add();
+                    goto UP;
+                    break;
+                case "q":
+                    album.Show();
+                    goto UP;
+                    break;
+                case "e":
                     break;
                 default:
+                    goto UP;
                     break;
             }
         }
