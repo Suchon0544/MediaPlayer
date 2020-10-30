@@ -9,38 +9,38 @@ namespace MediaPlayer
         Album album1 = new Album();
         int ordering = 0;
 
-        public void Display()
+        private void Display()
         {
             Console.WriteLine("Now Playing   :  " + album1.PlayCD(ordering).name);
             Console.WriteLine("Artist   :  " + album1.PlayCD(ordering).artist);
             Console.WriteLine(" 00.00 ------------------------- " + album1.PlayCD(ordering).time);
         }
-        public void play()
+        private void play()
         {
             Display();
             Console.WriteLine("<              [pause]              >");
         }
 
-        public void next()
+        private void next()
         {
             ordering = ordering + 1;
             Display();
             Console.WriteLine("<              [pause]              >");
         }
-        public void previous()
+        private void previous()
         {
             ordering = ordering - 1;
             Display();
             Console.WriteLine("<              [pause]              >");
         }
-        public void Stop()
+        private void Stop()
         {
             ordering = 0;
             Display();
             Console.WriteLine("<               [play]               >");
         }
 
-        public void add()
+        private void add()
         {
             Console.Write("input name = ");
             string input_name = Console.ReadLine();
