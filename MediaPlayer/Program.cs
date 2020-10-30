@@ -18,7 +18,7 @@ namespace MediaPlayer
         {
             Player player = new Player();
             player.player_display();
-            Bottom.ask();
+            Botton.ask();
         }
     }
 }    
